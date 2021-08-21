@@ -31,3 +31,12 @@ const words = [
     'drag',
     'loving'
 ]
+
+// init word
+let word
+
+// init score
+let score = 0
+
+// init time
+let time = 10
