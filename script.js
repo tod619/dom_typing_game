@@ -41,6 +41,9 @@ let score = 0
 // init time
 let time = 10
 
+// focus on text inpute when game starts
+text.focus()
+
 // Function to get a random word
 function getRandomWord() {
     return words[Math.floor(Math.random() * words.length)]
