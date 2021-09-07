@@ -52,4 +52,26 @@ function addWordToDom() {
     word.innerHTML = randomWord
 }
 
+// function to update player score
+function updateScore() {
+    score++
+    scoreEl.innerHTML = score
+}
+
 addWordToDom()
+
+// Event Listners
+text.addEventListener('input', e => {
+    const insertedText = e.target.value
+    
+    if(insertedText === randomWord) {
+        // call addWordToDom
+        addWordToDom()
+
+        // update player score
+        updateScore()
+
+        // clear input field
+        e.target.value = ''
+    }
+})
