@@ -33,10 +33,17 @@ const words = [
 ]
 
 // init word
-let word
+let randomWord
 
 // init score
 let score = 0
 
 // init time
 let time = 10
+
+// Function to get a random word
+function getRandomWord() {
+    return words[Math.floor(Math.random() * words.length)]
+}
+
+console.log(getRandomWord())
