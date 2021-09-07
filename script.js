@@ -46,4 +46,10 @@ function getRandomWord() {
     return words[Math.floor(Math.random() * words.length)]
 }
 
-console.log(getRandomWord())
+// Add random word to DOM
+function addWordToDom() {
+    randomWord = getRandomWord()
+    word.innerHTML = randomWord
+}
+
+addWordToDom()
