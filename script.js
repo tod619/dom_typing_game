@@ -79,4 +79,3 @@ text.addEventListener('input', e => {
     }
 })
 
-// test
