@@ -71,7 +71,21 @@ function updateTime() {
 
     if(time === 0) {
         clearInterval(timeInterval)
+
+        // call end game function to end players game 
+        gameOver()
     }
+}
+
+// function to end game + show game over screen
+function gameOver() {
+    endGameEl.innerHTML = `
+    <h1>Time Ran Out</h1>
+    <p>Your final score is: ${score}</p>
+    <button onclick ="location.reload()">Play Again</button>
+    `
+
+    endGameEl.style.display = "flex"
 }
 
 addWordToDom()
