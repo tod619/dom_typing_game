@@ -41,8 +41,12 @@ let score = 0
 // init time
 let time = 10
 
-// init difficulty
-let difficulty = 'medium' 
+// init difficulty set value to what is in local storage or default to medium
+let difficulty = localStorage.getItem('difficulty') !== null ? localStorage.getItem('difficulty') : 'medium'
+
+// Select box dificulty set value
+difficultySelect.value = localStorage.getItem('difficulty') !== null ? localStorage.getItem('difficulty') : 'medium'
+
 
 // Start the count down
 const timeInterval = setInterval(updateTime, 1000);
