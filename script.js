@@ -103,6 +103,11 @@ text.addEventListener('input', e => {
 
         // clear input field
         e.target.value = ''
+
+        // add some estra time
+        time += 5
+
+        updateTime()
     }
 })
 
