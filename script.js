@@ -41,6 +41,9 @@ let score = 0
 // init time
 let time = 10
 
+// Start the count down
+const timeInterval = setInterval(updateTime, 1000);
+
 // focus on text inpute when game starts
 text.focus()
 
@@ -59,6 +62,16 @@ function addWordToDom() {
 function updateScore() {
     score++
     scoreEl.innerHTML = score
+}
+
+// function to update time
+function updateTime() {
+    time--
+    timeEl.innerHTML = time + 's'
+
+    if(time === 0) {
+        clearInterval(timeInterval)
+    }
 }
 
 addWordToDom()
