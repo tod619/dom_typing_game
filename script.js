@@ -41,6 +41,9 @@ let score = 0
 // init time
 let time = 10
 
+// init difficulty
+let difficulty = 'medium' 
+
 // Start the count down
 const timeInterval = setInterval(updateTime, 1000);
 
@@ -116,5 +119,11 @@ text.addEventListener('input', e => {
 // Settings btn
 settingsBtn.addEventListener('click', () => {
     settings.classList.toggle('hide')
+})
+
+// Settings select input
+settingsForm.addEventListener('change', e => {
+    difficulty = e.target.value
+    localStorage.setItem('difficulty',difficulty)
 })
 
